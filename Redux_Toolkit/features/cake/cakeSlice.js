@@ -11,7 +11,7 @@ const cakeSlice = createSlice({
     ordered: (state) => {
       state.numOfCakes--;
     },
-    restocked: (state) => {
+    restocked: (state, action) => {
       state.numOfCakes += action.payload;
     },
   },
@@ -19,6 +19,3 @@ const cakeSlice = createSlice({
 
 export default cakeSlice.reducer;
 export const cakeActions = cakeSlice.actions;
-
-// module.export = cakeSlice.reducer;
-// module.export.cakeActions = cakeSlice.actions;
